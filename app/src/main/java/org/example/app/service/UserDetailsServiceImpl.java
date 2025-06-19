@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.apache.el.util.Validation;
 import org.example.app.entities.UserInfo;
+import org.example.app.model.UserInfoDto;
 import org.example.app.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
