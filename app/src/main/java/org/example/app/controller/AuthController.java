@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,7 +30,7 @@ public class AuthController {
     private UserDetailsServiceImpl userDetailsService;
 
     @PostMapping("auth/v1/signup")
-    public ResponseEntity SignUp(@ResponseBody UserInfoDto userInfoDto)
+    public ResponseEntity SignUp(@RequestBody UserInfoDto userInfoDto)
     {
         try {
             Boolean isSignUped = userDetailsService.signupUser(userInfoDto);

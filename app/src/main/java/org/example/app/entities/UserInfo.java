@@ -2,10 +2,7 @@ package org.example.app.entities;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 
 import java.util.Set;
@@ -18,7 +15,8 @@ import java.util.HashSet;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "users")
-
+@Getter
+@Setter
 //One user can have many roles
 //One role can belong to many users
 
@@ -40,6 +38,7 @@ public class UserInfo {
     //the join table acts like a bridge to handle Many-to-Many cleanly and keeps the database normalized.
 
     private Set<UserRole> roles = new HashSet<>();
+
 
 
 }
